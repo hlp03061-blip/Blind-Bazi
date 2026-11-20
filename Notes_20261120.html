@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>盲派八字實戰課堂筆記：殺星做功、十大技法與虛拱填實定應期</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+/*
+  Balanced · Humanities & Education (盲派八字課堂筆記 · 傳統由右至左排盤版)
+  Hero: Editorial headline-led with deck and direct answer-first thesis
+  Section order: Core Thesis -> 3 Practical Cases (Table + 2 SVG Diagrams) -> 10 Techniques Master Table -> Celebrity Verification & Deep Concepts -> Warren Q&A (SVG Diagram) -> Key Takeaways & Follow-up Band -> Sources
+  Fonts: Noto Serif TC (display & callouts) + Noto Sans TC (body) + JetBrains Mono (data/table headers)
+  Palette: Crisp Gallery White (#FFFFFF), Deep Ink (#111317), Cinnabar Red Accent (#9E2A2B / text #7A1C1D), Slate Teal Accent-2 (#1A535C / text #123D44), Cool Mist Band (#F3F5F8)
+  Image radius: 0px (structural SVG diagrams)
+  Emphasis moment: Giant typographic pull-quote on blind-school core ("克開與結合之間")
+  Signature element: Full-width 10-item Blind-School Techniques Master Matrix
+  Chart types: 3 custom inline SVG BaZi structural & mechanism diagrams (傳統由右至左：時←日←月←年，大運流年置於原局右邊)
+*/
+:root {
+  --paper: #FFFFFF;
+  --ink: #111317;
+  --ink2: #363C45;
+  --mute: #525A66;
+  --hair: #D5DBE3;
+  --accent: #9E2A2B;
+  --accent-text: #7A1C1D;
+  --accent-2: #1A535C;
+  --accent-2-text: #123D44;
+  --band: #F3F5F8;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16.5px;
+  line-height: 1.78;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  width: 100%;
+  padding: 68px clamp(24px, 10.4vw, 112px) 92px;
+}
+
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: 24px;
+}
+
+.sec {
+  margin-top: 96px;
+  padding-top: 32px;
+  border-top: 1px solid var(--hair);
+}
+
+.sec-tight {
+  margin-top: 64px;
+  padding-top: 28px;
+  border-top: 1px solid var(--hair);
+}
+
+/* Typography */
+h1 {
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 900;
+  font-size: clamp(38px, 5.2vw, 72px);
+  line-height: 1.16;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  text-wrap: balance;
+  max-width: 18ch;
+}
+
+.deck {
+  margin-top: 22px;
+  font-size: 19px;
+  line-height: 1.65;
+  color: var(--ink2);
+  max-width: 62ch;
+}
+
+.meta-inline {
+  margin-top: 16px;
+  font-size: 13.5px;
+  color: var(--mute);
+}
+
+.meta-inline a {
+  color: var(--accent-text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+h2 {
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 700;
+  font-size: clamp(26px, 3vw, 40px);
+  line-height: 1.24;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin-bottom: 20px;
+  text-wrap: balance;
+}
+
+h3 {
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 1.35;
+  color: var(--ink);
+  margin-top: 28px;
+  margin-bottom: 10px;
+}
+
+p {
+  color: var(--ink2);
+  margin-bottom: 16px;
+  max-width: 66ch;
+}
+
+p strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+a {
+  color: var(--accent-text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Answer-first thesis block */
+.thesis-row {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 2px solid var(--ink);
+}
+
+.thesis-col {
+  grid-column: span 4;
+  padding-right: 16px;
+}
+
+.thesis-col h3 {
+  margin-top: 0;
+  font-size: 18px;
+  color: var(--accent-text);
+}
+
+.thesis-col p {
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+/* Split layout */
+.split-left { grid-column: 1 / 5; }
+.split-right { grid-column: 5 / 13; }
+.span-full { grid-column: 1 / 13; }
+.span-indent { grid-column: 3 / 12; }
+
+/* Open lists */
+ul.open-list, ol.open-list {
+  list-style: none;
+  margin: 14px 0 22px;
+  max-width: 66ch;
+}
+
+ul.open-list li, ol.open-list li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 12px;
+  color: var(--ink2);
+}
+
+ul.open-list li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--accent-text);
+  font-weight: 700;
+}
+
+ol.open-list {
+  counter-reset: item;
+}
+ol.open-list li::before {
+  counter-increment: item;
+  content: counter(item) ".";
+  position: absolute;
+  left: 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent-text);
+  top: 2px;
+}
+
+/* Open tables (no zebra stripes, max 3) */
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  margin: 28px 0 12px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14.5px;
+  line-height: 1.55;
+  text-align: left;
+}
+
+thead th {
+  font-family: 'JetBrains Mono', 'Noto Sans TC', monospace;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--mute);
+  padding: 12px 14px 12px 0;
+  border-bottom: 2px solid var(--ink);
+  white-space: nowrap;
+}
+
+tbody td {
+  padding: 14px 14px 14px 0;
+  border-bottom: 1px solid var(--hair);
+  color: var(--ink2);
+  vertical-align: top;
+}
+
+tbody td:first-child {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.bazi-rtl {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+}
+
+.tier-1 {
+  color: var(--accent-text);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.tier-2 {
+  color: var(--accent-2-text);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.tier-34 {
+  color: var(--mute);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Figures & SVG diagrams */
+figure {
+  margin: 36px 0;
+  width: 100%;
+}
+
+.fig-title {
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 700;
+  font-size: 19px;
+  color: var(--ink);
+  margin-bottom: 14px;
+  line-height: 1.35;
+}
+
+figcaption {
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--mute);
+  line-height: 1.55;
+}
+
+svg.diagram {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+/* Pull quote (single emphasis moment) */
+.pull-quote {
+  margin: 72px 0;
+  padding: 36px 0;
+  border-top: 2px solid var(--ink);
+  border-bottom: 1px solid var(--hair);
+}
+
+.pull-quote blockquote {
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 700;
+  font-size: clamp(26px, 3.2vw, 42px);
+  line-height: 1.38;
+  color: var(--ink);
+  max-width: 28ch;
+}
+
+.pull-quote .quote-attr {
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--mute);
+}
+
+/* Full-bleed band (max 1) */
+.band {
+  margin: 80px calc(-1 * clamp(24px, 10.4vw, 112px)) 0;
+  padding: 56px clamp(24px, 10.4vw, 112px);
+  background: var(--band);
+  border-top: 1px solid var(--hair);
+  border-bottom: 1px solid var(--hair);
+}
+
+.band h2 {
+  margin-bottom: 18px;
+}
+
+.three-col-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 24px;
+}
+
+.strip-item {
+  border-top: 1px solid var(--hair);
+  padding-top: 16px;
+}
+
+.strip-item h3 {
+  margin-top: 0;
+  font-size: 17.5px;
+  color: var(--ink);
+}
+
+.strip-item p {
+  font-size: 14.5px;
+  margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .split-left, .split-right, .span-indent, .thesis-col {
+    grid-column: 1 / 13;
+  }
+  .thesis-col {
+    margin-bottom: 20px;
+    padding-right: 0;
+  }
+  .three-col-strip {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+<body>
+<main class="page">
+
+  <!-- HERO -->
+  <header>
+    <h1>盲派八字實戰精要：殺星做功、十大技法與虛拱填實定應期</h1>
+    <p class="deck">
+      整理自《隱姓埋名談術數》2026年11月19日講座《恭喜網友成功破解到盲人算命一個絕密秘訣！》，聚焦升學與求職應期、首次公開的盲派十大特別技法評級表，以及虛拱填實的精細推演。
+    </p>
+    <p class="meta-inline">
+      主講：隱姓先生（<a href="http://www.youtube.com/watch?v=7cy7LSTQDQ8" target="_blank" rel="noopener noreferrer">YouTube 原片，1小時28分40秒</a>）· 排盤格式：所有原局八字均按傳統<strong>由右至左</strong>排列（<strong>時 ← 日 ← 月 ← 年</strong>，即年柱在右、時柱在左），大運、流年及流月置於原局右邊。
+    </p>
+  </header>
+
+  <!-- ANSWER-FIRST THESIS -->
+  <section class="grid-12 thesis-row" aria-label="核心總綱">
+    <div class="thesis-col">
+      <h3>升學與求職只看核心做功</h3>
+      <p>年幼求學、成年求職皆看<strong>殺星</strong>或<strong>傷官星</strong>是否明朗做功。當「一打二」或大運流月齊力啟動，結果往往壓倒現實常理，且過月後<strong>餘氣猶在</strong>。</p>
+    </div>
+    <div class="thesis-col">
+      <h3>做功模式居首，隱藏處次之</h3>
+      <p>十大盲派技法中，<strong>天干做功模式</strong>與<strong>斷事四干支</strong>同列最高「一等」。王師傅直言：若不懂做功邏輯，知道再多隱藏處亦無從下手。</p>
+    </div>
+    <div class="thesis-col">
+      <h3>虛拱須待填實，有制方能活盤</h3>
+      <p>虛拱之字不能直接克實體；流月填實時，無制則塞死成「填實為凶」，若有他干（如乙木）克動填實之字，反成「滿盤皆活」之應期。</p>
+    </div>
+  </section>
+
+  <!-- SECTION 1: 3 PRACTICAL CASES -->
+  <section class="sec">
+    <div class="grid-12">
+      <div class="split-left">
+        <h2>命理常壓倒常理：升學與求職的三組實戰對照</h2>
+      </div>
+      <div class="split-right">
+        <p>
+          隱姓先生指出，算命最貼地的日常用途並非空談國運，而是判斷孩子何時考入心儀學校、成年人何時轉職得力。三組身邊實例清楚呈現同一條盲派鐵律：<strong>逢親見兩個目標對象，傷官或殺星一打落去必然應事</strong>；反之，若啟動殺星的關鍵干支被流年合死，實力再強也只能靜待時機。
+        </p>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>命例與背景</th>
+            <th>原局四柱（時 ← 日 ← 月 ← 年）</th>
+            <th>核心做功機制</th>
+            <th>關鍵應期與流月</th>
+            <th>現實反差與驗證結果</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>精靈小女孩<br><span class="mono">03:17–07:30</span></td>
+            <td class="bazi-rtl">壬午　乙亥　癸亥　癸卯</td>
+            <td>原局水極旺、地支見<strong>兩個亥</strong>。流年乙巳之巳火（傷官星）隨時準備沖打雙亥。</td>
+            <td>2025乙巳年<strong>丙戌月</strong>（丙火引動地支巳火，一打特別有力）。</td>
+            <td>同場6–7人面試唯獨她坐下大哭、全程母親抱住；結果仍獲市區心儀幼稚園取錄。</td>
+          </tr>
+          <tr>
+            <td>升小學女孩<br><span class="mono">07:31–30:10</span></td>
+            <td class="bazi-rtl">庚戌　壬申　辛卯　辛丑</td>
+            <td>原局卯沖拱酉、卯戌合（傷官與正印雙向做功）；大運<strong>壬辰</strong>併日主兩壬克流年丙火，地支<strong>一辰沖兩戌</strong>。</td>
+            <td>2026丙午年<strong>戊戌月</strong>（戊殺無黏連入局，三重做功）及<strong>己亥月餘氣</strong>。</td>
+            <td>讀天水圍普通幼稚園、成績中挺、僅有參加獎；竟獲九龍塘傳統名校破例<strong>一次面試直錄</strong>，過月後再連收兩間（含港島傳統名校）。</td>
+          </tr>
+          <tr>
+            <td>網友 K Tong<br><span class="mono">30:10–39:35</span></td>
+            <td class="bazi-rtl">庚午　己酉　乙丑　癸亥</td>
+            <td>己庚連體，須靠大運<strong>辛金</strong>啟動撞擊月干乙木七殺；但2026流年丙火與辛金成<strong>丙辛合</strong>，把辛金合死。</td>
+            <td>2026年內無望（丁酉月無效）；須待2026年尾踏入<strong>2027丁未羊年</strong>。</td>
+            <td>頂尖行業青年才俊、打贏創業官司後求職，實力遠勝小女孩；但2026全年卡住，印證「運未到難以強求」。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- DIAGRAM 1: 升小學女孩 (由右至左：時 日 月 年 | 大運 流年 流月) -->
+    <figure>
+      <div class="fig-title">升小學女孩在戊戌月形成「戊克雙壬克丙」與「一辰沖兩戌」三重做功</div>
+      <svg class="diagram" viewBox="0 0 700 410" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="升小學女孩八字由右至左排盤與戊戌月大做功圖解">
+        <!-- Divider between 原局 and 歲運 -->
+        <line x1="420" y1="20" x2="420" y2="236" stroke="#D5DBE3" stroke-width="1.5" stroke-dasharray="4 4"/>
+        <line x1="20" y1="54" x2="680" y2="54" stroke="#D5DBE3" stroke-width="1"/>
+        <line x1="20" y1="236" x2="680" y2="236" stroke="#D5DBE3" stroke-width="1"/>
+
+        <!-- Column Headers (Left -> Right: 時柱 日柱 月柱 年柱 | 大運 流年 流月) -->
+        <text x="75" y="38" font-size="14" fill="#525A66" text-anchor="middle" font-weight="600">時柱（魁罡）</text>
+        <text x="175" y="38" font-size="14" fill="#7A1C1D" text-anchor="middle" font-weight="700">日柱（日元）</text>
+        <text x="275" y="38" font-size="14" fill="#525A66" text-anchor="middle" font-weight="600">月柱</text>
+        <text x="370" y="38" font-size="14" fill="#525A66" text-anchor="middle" font-weight="600">年柱</text>
+
+        <text x="475" y="38" font-size="14" fill="#123D44" text-anchor="middle" font-weight="700">大運</text>
+        <text x="560" y="38" font-size="14" fill="#123D44" text-anchor="middle" font-weight="700">2026流年</text>
+        <text x="645" y="38" font-size="14" fill="#7A1C1D" text-anchor="middle" font-weight="700">關鍵流月</text>
+
+        <!-- Heavenly Stems Row (時:庚 日:壬 月:辛 年:辛 | 大運:壬 流年:丙 流月:戊) -->
+        <text x="75" y="112" font-size="28" fill="#111317" text-anchor="middle" font-family="Noto Serif TC, serif" font-weight="700">庚</text>
+        <text x="175" y="112" font-size="28" fill="#7A1C1D" text-anchor="middle" font-family="Noto Serif TC, serif" font-weight="900">壬</text>
+        <text x="275" y="112" font-size="28" fill="#111317" text-anchor="middle" font-family="Noto Serif TC, serif" font-weight="700">辛</text>
+        <text x="370" y="112" font-size="28" fill="#111317" text-anchor="middle" font-family="Noto Serif TC, serif" font-weight="700">辛</text>
+
+        <text x="475" y="112" font-size="28" fill="#123D44" text-anchor="middle" font-family="Noto Serif TC, serif" font-weight="900">壬</text>
+        <text x="560" y="112" font-size="28" fill="#123D44" text-anchor="middle" font-family="Noto Serif TC, serif" font-weight="700">丙</text>
+        <text x="645" y="112" font-size="28" fill="#7A1C1D" text-anchor="middle" font-family="Noto Serif TC, serif" font-weight="900">戊</text>
+
+        <!-- Arched Stem between two Xin (月辛 & 年辛) -->
+        <text x="322" y="80" font-size="13" fill="#525A66" text-anchor="middle">夾拱「丙」</text>
+
+        <!-- Stem Action Arrows -->
+        <!-- 雙壬併合 (日壬 x=175 <-> 大運壬 x=475) -->
+        <path d="M 175 126 C 175 154, 475 154, 475 126" fill="none" stroke="#1A535C" stroke-width="1.8" stroke-dasharray="4 3"/>
+        <text x="325" y="166" font-size="13.5" fill="#123D44" text-anchor="middle" font-weight="600">雙壬併合，齊克流年丙火</text>
+
+        <!-- 戊克壬 arrow -->
+        <path d="M 632 86 Q 560 58, 492 88" fill="none" stroke="#9E2A2B" stroke-width="2.2"/>
+        <polygon points="489,89 498,81 500,90" fill="#9E2A2B"/>
+        <text x="572" y="66" font-size="13.5" fill="#7A1C1D" text-anchor="middle" font-weight="700">戊殺無黏連直克</text>
+
+        <!-- Earthly Branches Row (時:戌 日:申 月:卯 年:丑 | 大運:辰 流年:午 流月:戌) -->
+        <text x="75" y="212" font-size="28" fill="#7A1C1D" text-anchor="middle" font-family="Noto Serif TC, serif" font-weight="900">戌</text>
+        <text x="175" y="212" font-size="28" fill="#111317" text-anchor="middle" font-family="Noto Serif TC, serif" font-weight="700">申</text>
+        <text x="275" y="212" font-size="28" fill="#111317" text-anchor="middle" font-family="Noto Serif TC, serif" font-weight="700">卯</text>
+        <text x="370" y="212" font-size="28" fill="#111317" text-anchor="middle" font-family="Noto Serif TC, serif" font-weight="700">丑</text>
+
+        <text x="475" y="212" font-size="28" fill="#123D44" text-anchor="middle" font-family="Noto Serif TC, serif" font-weight="900">辰</text>
+        <text x="560" y="212" font-size="28" fill="#123D44" text-anchor="middle" font-family="Noto Serif TC, serif" font-weight="700">午</text>
+        <text x="645" y="212" font-size="28" fill="#7A1C1D" text-anchor="middle" font-family="Noto Serif TC, serif" font-weight="900">戌</text>
+
+        <!-- Arched Branches (戌申間拱酉, 卯丑間拱寅) -->
+        <text x="125" y="260" font-size="13.5" fill="#525A66" text-anchor="middle">拱「酉」正印</text>
+        <text x="322" y="260" font-size="13.5" fill="#525A66" text-anchor="middle">拱「寅」食神</text>
+
+        <!-- One Chen (x=475) clashes Two Xu (時戌 x=75 & 流月戌 x=645) -->
+        <path d="M 462 222 Q 270 302, 82 224" fill="none" stroke="#9E2A2B" stroke-width="2.2"/>
+        <polygon points="79,223 89,221 86,230" fill="#9E2A2B"/>
+        <path d="M 488 222 Q 565 294, 638 224" fill="none" stroke="#9E2A2B" stroke-width="2.2"/>
+        <polygon points="641,222 640,232 632,228" fill="#9E2A2B"/>
+
+        <text x="350" y="306" font-size="14.5" fill="#7A1C1D" text-anchor="middle" font-weight="700">盲派至強模式：大運一「辰」同時沖時柱「戌」（魁罡）與流月「戌」</text>
+        <text x="350" y="330" font-size="13.5" fill="#363C45" text-anchor="middle">原局靜態：卯（傷官）沖拱酉（正印）兼卯戌合 → 才華讀書雙向做功；申克拱寅 → 偏印固執不妥協</text>
+
+        <!-- Legend footer inside SVG -->
+        <line x1="20" y1="358" x2="680" y2="358" stroke="#D5DBE3" stroke-width="1"/>
+        <text x="20" y="384" font-size="13" fill="#525A66">備註：A先生曾以諸葛神算（384籤）問聖保羅男女得吉；八字實錄九龍塘名校（Band 1率85–100%）及港島名校。</text>
+      </svg>
+      <figcaption>圖一：升小學女孩八字結構（原局由右至左：時←日←月←年，歲運置右）與2026年戊戌月做功路徑。來源：《隱姓埋名談術數》10:33–25:45、84:43–87:34。</figcaption>
+    </figure>
+
+    <!-- DIAGRAM 2: K Tong (由右至左：時 日 月 年 | 大運 流年 流月) -->
+    <figure>
+      <div class="fig-title">K Tong 因「丙辛合」鎖死辛金，丁酉月又因「丙丁連體」無法解套</div>
+      <svg class="diagram" viewBox="0 0 700 350" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="K Tong八字由右至左排盤與丙辛合鎖死殺星圖解">
+        <line x1="408" y1="18" x2="408" y2="215" stroke="#D5DBE3" stroke-width="1.5" stroke-dasharray="4 4"/>
+        <line x1="20" y1="50" x2="680" y2="50" stroke="#D5DBE3" stroke-width="1"/>
+        <line x1="20" y1="215" x2="680" y2="215" stroke="#D5DBE3" stroke-width="1"/>
+
+        <!-- Headers (Left -> Right: 時 日 月 年 | 大運 流年 流月) -->
+        <text x="72" y="34" font-size="14" fill="#525A66" text-anchor="middle" font-weight="600">時柱</text>
+        <text x="165" y="34" font-size="14" fill="#111317" text-anchor="middle" font-weight="700">日柱</text>
+        <text x="260" y="34" font-size="14" fill="#7A1C1D" text-anchor="middle" font-weight="700">月柱（殺星）</text>
+        <text x="355" y="34" font-size="14" fill="#525A66" text-anchor="middle" font-weight="600">年柱</text>
+
+        <text x="465" y="34" font-size="14" fill="#123D44" text-anchor="middle" font-weight="700">大運</text>
+        <text x="555" y="34" font-size="14" fill="#7A1C1D" text-anchor="middle" font-weight="700">2026流年</text>
+        <text x="640" y="34" font-size="14" fill="#525A66" text-anchor="middle" font-weight="600">流月測試</text>
+
+        <!-- Stems (時:庚 日:己 月:乙 年:癸 | 大運:辛 流年:丙 流月:丁) -->
+        <text x="72" y="110" font-size="28" fill="#111317" text-anchor="middle" font-family="Noto Serif TC, serif" font-weight="700">庚</text>
+        <text x="165" y="110" font-size="28" fill="#111317" text-anchor="middle" font-family="Noto Serif TC, serif" font-weight="700">己</text>
+        <text x="260" y="110" font-size="28" fill="#7A1C1D" text-anchor="middle" font-family="Noto Serif TC, serif" font-weight="900">乙</text>
+        <text x="355" y="110" font-size="28" fill="#111317" text-anchor="middle" font-family="Noto Serif TC, serif" font-weight="700">癸</text>
+
+        <text x="465" y="110" font-size="28" fill="#123D44" text-anchor="middle" font-family="Noto Serif TC, serif" font-weight="900">辛</text>
+        <text x="555" y="110" font-size="28" fill="#7A1C1D" text-anchor="middle" font-family="Noto Serif TC, serif" font-weight="900">丙</text>
+        <text x="640" y="110" font-size="28" fill="#525A66" text-anchor="middle" font-family="Noto Serif TC, serif" font-weight="700">丁</text>
+
+        <!-- Branches (時:午 日:酉 月:丑 年:亥 | 流月:酉) -->
+        <text x="72" y="194" font-size="26" fill="#363C45" text-anchor="middle" font-family="Noto Serif TC, serif">午</text>
+        <text x="165" y="194" font-size="26" fill="#363C45" text-anchor="middle" font-family="Noto Serif TC, serif">酉</text>
+        <text x="260" y="194" font-size="26" fill="#363C45" text-anchor="middle" font-family="Noto Serif TC, serif">丑</text>
+        <text x="355" y="194" font-size="26" fill="#363C45" text-anchor="middle" font-family="Noto Serif TC, serif">亥</text>
+        <text x="640" y="194" font-size="26" fill="#525A66" text-anchor="middle" font-family="Noto Serif TC, serif">酉</text>
+
+        <!-- Geng-Ji linked (時庚與日己) -->
+        <path d="M 72 124 L 72 140 L 165 140 L 165 124" fill="none" stroke="#525A66" stroke-width="1.6"/>
+        <text x="118" y="158" font-size="13" fill="#525A66" text-anchor="middle">己庚相連，須開乙殺</text>
+
+        <!-- Bing-Xin lock -->
+        <path d="M 480 100 L 540 100" fill="none" stroke="#9E2A2B" stroke-width="2.6"/>
+        <text x="510" y="84" font-size="13.5" fill="#7A1C1D" text-anchor="middle" font-weight="700">丙辛合死</text>
+
+        <!-- Blocked arrow from Xin (x=465) to Yi (x=260) -->
+        <path d="M 450 84 Q 362 52, 276 86" fill="none" stroke="#525A66" stroke-width="1.8" stroke-dasharray="5 4"/>
+        <text x="360" y="64" font-size="13" fill="#525A66" text-anchor="middle">欲以辛金撞乙殺（受阻）</text>
+
+        <!-- Ding-Bing linked -->
+        <path d="M 555 124 L 555 140 L 640 140 L 640 124" fill="none" stroke="#9E2A2B" stroke-width="1.8"/>
+        <text x="598" y="158" font-size="13.5" fill="#7A1C1D" text-anchor="middle" font-weight="600">丙丁連體，開不了丙</text>
+
+        <!-- Bottom diagnosis -->
+        <text x="20" y="252" font-size="15" fill="#111317" font-weight="700">結論與心態建議（「知命方能運命」）：</text>
+        <text x="20" y="280" font-size="14" fill="#363C45">1. K Tong 問丁酉月能否用丁火克開辛金來撞乙木——實戰證明不行，因丁與丙連體，只開到辛、開不到丙。</text>
+        <text x="20" y="308" font-size="14" fill="#363C45">2. 遇此類殺星被鎖之流年，宜早作心理準備，安排進修或休整，靜待2026年尾接2027丁未羊年氣入再發力。</text>
+      </svg>
+      <figcaption>圖二：網友 K Tong 八字（原局由右至左：時←日←月←年，歲運置右）2026年求職受阻機制。來源：《隱姓埋名談術數》33:13–36:25。</figcaption>
+    </figure>
+  </section>
+
+  <!-- SECTION 2: 10 TECHNIQUES MASTER MATRIX (SIGNATURE ELEMENT) -->
+  <section class="sec">
+    <div class="grid-12">
+      <div class="split-left">
+        <h2>盲派十大特別技法總表：重要性評級與古書對照</h2>
+      </div>
+      <div class="split-right">
+        <p>
+          因網友<strong>剛佬（Kit Lo）</strong>私下獲悉盲派秘訣後舉一反三，竟發掘出連古書未載、連隱姓先生本人亦未曾察覺的新運算空間（如入「金礦」後再推開一道門發現新「金庫」），隱姓先生遂於本集首次系統公開全套<strong>十項盲派特別技法</strong>（第11項留空待後人開拓），按重要性分為<strong>一等（最高）至四等（最低）</strong>。
+        </p>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>序號與技法名稱</th>
+            <th>重要性</th>
+            <th>古書記載</th>
+            <th>核心運作邏輯與課堂重點</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1. 天干做功模式</td>
+            <td class="tier-1">一等</td>
+            <td>基本上沒有</td>
+            <td>如何黏連（黐埋）、克開、運用虛拱之字。王師傅兩度點醒：此乃全派最核心根基，透徹後其餘隱藏處皆可逐步揭曉。</td>
+          </tr>
+          <tr>
+            <td>2. 干支混合做功模式</td>
+            <td class="tier-2">二等</td>
+            <td>基本上沒有</td>
+            <td>天干與地支之協同配合（異於坊間單純地支沖散）。核心金句：<strong>「天干若無受封閉，地支點沖都唔怕。」</strong></td>
+          </tr>
+          <tr>
+            <td>3. 干支藏中藏</td>
+            <td class="tier-2">二等</td>
+            <td>完全沒有</td>
+            <td>超越四柱、大運流年及常規夾拱以外的深層隱藏機制；開通後連人之生死皆能清晰辨識。</td>
+          </tr>
+          <tr>
+            <td>4. 斷事四干支</td>
+            <td class="tier-1">一等</td>
+            <td>有（燈下黑）</td>
+            <td>斷婚期、生子、死亡及精準校驗八字真偽必用。古書如命宮胎元般有列出卻未明言用法，《鐵板神數》亦作強烈暗示。</td>
+          </tr>
+          <tr>
+            <td>5. 元運柱</td>
+            <td class="tier-34">四等</td>
+            <td>沒有</td>
+            <td>屬「助燃劑」角色（如范仲淹八字，無元運柱亦會夾拱出甲木，加上它僅令力度衡量更準），故最早公開。</td>
+          </tr>
+          <tr>
+            <td>6. 最強五行</td>
+            <td class="tier-34">四等</td>
+            <td>基本上沒有</td>
+            <td>受《滴天髓》啟發推敲而成。Kit Lo 拍片前三小時最新發現：細緻考量最強五行可精準推斷病亡者之具體病症（待進一步驗證）。</td>
+          </tr>
+          <tr>
+            <td>7. 進氣、退氣</td>
+            <td class="tier-2">二等</td>
+            <td>有（淺層）</td>
+            <td>胡一鳴、司螢居士著作有提流月流年提早入氣與餘氣；但盲派深層用法極為守秘，可如夏仲奇老師一語斷出「終身監禁」。</td>
+          </tr>
+          <tr>
+            <td>8. 出生四柱疊氣</td>
+            <td class="tier-34">三等</td>
+            <td>基本上沒有</td>
+            <td>涉及時頭、時尾及節氣（如立春）交界出生，前後干支同時疊加影響。因極端案例不常見故列三等。</td>
+          </tr>
+          <tr>
+            <td>9. 干支保險線</td>
+            <td class="tier-2">二等</td>
+            <td>沒有</td>
+            <td>即使原局地支寅申子午全沖，亦不代表必然出事，須待「保險線」被開動啟動後方才應驗。</td>
+          </tr>
+          <tr>
+            <td>10. Kit Lo 之秘</td>
+            <td class="tier-34">三等</td>
+            <td>完全沒有</td>
+            <td>網友剛佬破解之獨門技法，經隱姓先生連看兩小時驗證確實有效，重要性高於元運柱與最強五行；須建基於前數項秘訣方能深入。</td>
+          </tr>
+          <tr>
+            <td>11. （留空待填）</td>
+            <td class="mono">—</td>
+            <td class="mono">—</td>
+            <td>象徵命理屬開放領域（如民國上海盲派大師張鐵堂與師父鄭師傅各有所得），留待全球網友日後發掘填補。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- SECTION 3: CELEBRITY VERIFICATION & DEEP EXAMPLES -->
+  <section class="sec">
+    <div class="grid-12">
+      <div class="split-left">
+        <h2>校驗八字與深層進退氣：四組破除坊間迷思的關鍵案例</h2>
+      </div>
+      <div class="split-right">
+        <p>
+          講解「斷事四干支」、「進氣退氣」與「出生四柱疊氣」時，隱姓先生插播了東西方最具代表性的名人八字及實戰案例，提醒學員切忌「習非成是」或事後「套命」，應以精準時辰與盲派本法校勘。
+        </p>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>案例對象</th>
+            <th>坊間慣用誤區</th>
+            <th>盲派校驗與核心洞見</th>
+            <th>實務提醒</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>梅艷芳<br><span class="mono">52:07–54:03</span></td>
+            <td>長期採用「丙戌日元」八字並加以解釋。</td>
+            <td>有九成以上機會為假盤，真實盤應為<strong>癸水日元（豬女盤）</strong>；華人重視生辰做法事，不會改生辰而留真死期。</td>
+            <td>若缺乏「斷事四干支」作校驗，極易將錯誤八字硬套人生大事。</td>
+          </tr>
+          <tr>
+            <td>戴安娜王妃<br><span class="mono">54:04–57:45</span></td>
+            <td>多數華人命理師仍沿用「丙戌時」。</td>
+            <td>計入真太陽時與英國夏令時間，百分百確定為<strong>「乙酉時」</strong>。</td>
+            <td>盲派兼看時頭時尾合參故兩者皆參，但建檔與開發 App 必須更正留存<strong>乙酉時</strong>。</td>
+          </tr>
+          <tr>
+            <td>終身被囚男命<br><span class="mono">63:30–65:49</span></td>
+            <td>附會「辰戌天羅地網坐監」、大運流年見辰即坐一世。</td>
+            <td>1973年生，夏仲奇老師斷其2000庚辰年入獄後「一世出唔返嚟」，實乃最深層的<strong>進氣、退氣</strong>機制所致，與辰戌牢獄象徵無關。</td>
+            <td>進退氣之學問遠比「早一個月／遲一個月睇」深奧得多。</td>
+          </tr>
+          <tr>
+            <td>同八字童對比<br><span class="mono">65:55–68:04</span></td>
+            <td>忽略同一個時辰內「時頭」與「時尾」之氣機差異。</td>
+            <td>與精靈小女孩同年同月同日同時出生之男童：女孩生於<strong>時頭</strong>精靈活潑，男童生於<strong>時尾</strong>確診自閉症。</td>
+            <td>立春交界或時頭時尾出生者，須兼顧前後交疊之氣。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- SECTION 4: WARREN Q&A (DIAGRAM 3: 由右至左 時干 乙 | 日干 甲 | 月干 虛拱己 | 年干 甲 || 流年 癸) -->
+  <section class="sec">
+    <div class="grid-12">
+      <div class="split-left">
+        <h2>Warren 追問精解：破除「填實為凶」迷思與定應期心法</h2>
+      </div>
+      <div class="split-right">
+        <p>
+          針對「原局天干（由右至左：時←日←月←年）為<strong>乙、甲、[空]、甲</strong>（兩甲之間虛拱己土正財），流年<strong>癸水</strong>由右邊入局會否被己土擋住」一題，網友 Warren 敏銳指出矛盾：記憶中「虛拱之己土不能克開實體癸水」，為何能啟動做功？隱姓先生高度讚賞此問（並記功一筆 bonus），藉此完整揭示盲派<strong>「填實」與「定應期」</strong>的運作鏈條。
+        </p>
+        <ul class="open-list">
+          <li><strong>確認前提</strong>：單靠虛拱的己土，確實不能直接克開實體的癸水；癸水入局先與甲木黏連。</li>
+          <li><strong>「填實為凶」的真實條件</strong>：當流月遇「己」填實時，若原局旁邊<strong>沒有乙木</strong>可用，己土塞死在兩甲之間動彈不得，既克不到癸水又堵塞格局，這才叫填實為凶。</li>
+          <li><strong>「滿盤皆活」與定應期</strong>：若原局旁邊<strong>有乙木</strong>（或遇庚金、甚至己申拱庚克開甲木放出乙木），則在<strong>己月填實</strong>進來的一刻，形成「乙克己 → 己克癸」連環做功，癸水可用且正財飆升——該「己月」正是財源滾滾之<strong>應期</strong>（丑月、未月逢己日有時亦可應）。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- DIAGRAM 3: Warren Q&A -->
+    <figure>
+      <div class="fig-title">「己月填實」配合乙木啟動「乙克己 → 己克癸」，變「填實為凶」為滿盤皆活</div>
+      <svg class="diagram" viewBox="0 0 700 390" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="天干由右至左排列虛拱己土與流月填實定應期對比圖解">
+        <!-- Top row: Original Stems (時←日←月←年 | 流年) -->
+        <line x1="455" y1="16" x2="455" y2="128" stroke="#D5DBE3" stroke-width="1.5" stroke-dasharray="4 4"/>
+        <line x1="20" y1="48" x2="680" y2="48" stroke="#D5DBE3" stroke-width="1"/>
+
+        <text x="80" y="34" font-size="14" fill="#123D44" text-anchor="middle" font-weight="700">時干</text>
+        <text x="180" y="34" font-size="14" fill="#525A66" text-anchor="middle" font-weight="600">日干</text>
+        <text x="290" y="34" font-size="14" fill="#525A66" text-anchor="middle" font-weight="600">月干（空開）</text>
+        <text x="400" y="34" font-size="14" fill="#525A66" text-anchor="middle" font-weight="600">年干</text>
+        <text x="530" y="34" font-size="14" fill="#7A1C1D" text-anchor="middle" font-weight="700">流年</text>
+
+        <text x="80" y="102" font-size="28" fill="#123D44" text-anchor="middle" font-family="Noto Serif TC, serif" font-weight="900">乙</text>
+        <text x="180" y="102" font-size="28" fill="#111317" text-anchor="middle" font-family="Noto Serif TC, serif" font-weight="700">甲</text>
+        <text x="290" y="102" font-size="24" fill="#525A66" text-anchor="middle" font-family="Noto Serif TC, serif">（虛拱己）</text>
+        <text x="400" y="102" font-size="28" fill="#111317" text-anchor="middle" font-family="Noto Serif TC, serif" font-weight="700">甲</text>
+
+        <text x="530" y="102" font-size="28" fill="#7A1C1D" text-anchor="middle" font-family="Noto Serif TC, serif" font-weight="900">癸</text>
+        <text x="572" y="96" font-size="13.5" fill="#7A1C1D" text-anchor="start">由右邊入局</text>
+        <text x="572" y="114" font-size="13" fill="#525A66" text-anchor="start">黐住兩甲木</text>
+
+        <!-- Divider into two scenarios -->
+        <line x1="20" y1="146" x2="680" y2="146" stroke="#D5DBE3" stroke-width="1"/>
+        <line x1="350" y1="146" x2="350" y2="366" stroke="#D5DBE3" stroke-width="1"/>
+
+        <!-- Left Scenario: No Yi Wood -->
+        <text x="20" y="178" font-size="16" fill="#525A66" font-weight="700">情境 A：旁邊無「乙木」可用</text>
+        <text x="20" y="208" font-size="14" fill="#363C45">流月「己」填實入兩甲之間</text>
+        <line x1="30" y1="234" x2="310" y2="234" stroke="#525A66" stroke-width="2" stroke-dasharray="4 4"/>
+        <text x="170" y="260" font-size="15" fill="#111317" text-anchor="middle" font-weight="700">甲 ─ [ 己填實塞死 ] ─ 甲</text>
+        <text x="20" y="296" font-size="14" fill="#525A66">• 無木疏土，己土完全塞到陷，動彈不得</text>
+        <text x="20" y="322" font-size="14" fill="#525A66">• 克不開流年癸水 → 坊間所言「填實為凶」</text>
+
+        <!-- Right Scenario: With Yi Wood -->
+        <text x="374" y="178" font-size="16" fill="#7A1C1D" font-weight="700">情境 B：旁邊有「乙木」啟動（應期）</text>
+        <text x="374" y="208" font-size="14" fill="#363C45">流月「己」填實，觸發三步連環做功：</text>
+
+        <!-- Chain diagram -->
+        <text x="405" y="260" font-size="22" fill="#123D44" text-anchor="middle" font-family="Noto Serif TC, serif" font-weight="900">乙</text>
+        <line x1="428" y1="253" x2="486" y2="253" stroke="#1A535C" stroke-width="2.2"/>
+        <polygon points="490,253 480,248 480,258" fill="#1A535C"/>
+        <text x="458" y="242" font-size="12.5" fill="#123D44" text-anchor="middle" font-weight="600">克開</text>
+
+        <text x="520" y="260" font-size="22" fill="#7A1C1D" text-anchor="middle" font-family="Noto Serif TC, serif" font-weight="900">己</text>
+        <text x="520" y="280" font-size="12" fill="#7A1C1D" text-anchor="middle">流月填實</text>
+
+        <line x1="544" y1="253" x2="602" y2="253" stroke="#9E2A2B" stroke-width="2.2"/>
+        <polygon points="606,253 596,248 596,258" fill="#9E2A2B"/>
+        <text x="574" y="242" font-size="12.5" fill="#7A1C1D" text-anchor="middle" font-weight="600">克開</text>
+
+        <text x="634" y="260" font-size="22" fill="#111317" text-anchor="middle" font-family="Noto Serif TC, serif" font-weight="900">癸</text>
+
+        <text x="374" y="310" font-size="14" fill="#111317" font-weight="700">• 滿盤皆活：正財做功，癸水亦得釋放可用</text>
+        <text x="374" y="336" font-size="14" fill="#363C45">• 定應期：鎖定「己月」財運飆青（丑未月己日亦可）</text>
+      </svg>
+      <figcaption>圖三：天干（原局由右至左：時←日←月←年，流年置右）虛拱己土在流月填實下的兩種結局與定應期方法。來源：《隱姓埋名談術數》73:31–80:33。</figcaption>
+    </figure>
+
+    <!-- PULL QUOTE (SINGLE EMPHASIS MOMENT) -->
+    <div class="pull-quote">
+      <blockquote>「以前盲人連字都唔識，邊會學到咁多深奧文詞？全套盲派說到底，就係喺『克開』同『結合』之間不斷變化、玩到純熟。」</blockquote>
+      <div class="quote-attr">—— 隱姓先生總結盲派八字本質（80:40）</div>
+    </div>
+  </section>
+
+  <!-- FULL-BLEED BAND: APPENDIX & FOLLOW-UPS (MAX 1 BAND) -->
+  <section class="band">
+    <h2>課後補充、赤子釋疑與兩週後追蹤</h2>
+    <div class="three-col-strip">
+      <div class="strip-item">
+        <h3>「隱藏處」包含「斷事四干支」</h3>
+        <p>
+          回覆整理出詳盡《孔子年表》的網友<strong>赤子</strong>：若只看一生格局、不開大運流年，可不動用斷事四干支；但凡要細微斷事，就必須動用。因此「隱藏處」範圍更廣，包含「斷事四干支」。
+        </p>
+      </div>
+      <div class="strip-item">
+        <h3>餘氣猶在：過月仍連中兩間名校</h3>
+        <p>
+          錄影後兩週補錄：升小學女孩雖已過戊戌月、進入<strong>己亥月</strong>，因戊戌大做功之餘氣猶在，一週內再連獲兩間名校取錄（一間強過一間，第三間已為港島傳統名校；女拔萃未收，聖保羅男女待放榜）。
+        </p>
+      </div>
+      <div class="strip-item">
+        <h3>錦囊頒發與下集預告</h3>
+        <p>
+          向開發八字 App 的 <strong>Thomas</strong> 與另一位女網友頒發「必問必答錦囊」；確認 <strong>Warren</strong> 錦囊未用且再獲記功。下集將分享一位網友<strong>事前精準預言出事月份與約略日子</strong>並應驗的硬核實例。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOURCES -->
+  <section class="sec-tight">
+    <h2>參考來源</h2>
+    <ol class="open-list">
+      <li>
+        隱姓埋名談術數（2026年11月19日）：<a href="http://www.youtube.com/watch?v=7cy7LSTQDQ8" target="_blank" rel="noopener noreferrer">《恭喜網友成功破解到盲人算命一個絕密秘訣！》</a>（YouTube 原始影片，片長 1:28:40，對應使用者上傳音檔 <code>20261120_恭喜網友成功破解到盲人算命一個秘訣.mp3</code>）。
+      </li>
+    </ol>
+  </section>
+
+</main>
+</body>
+</html>
